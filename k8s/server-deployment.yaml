@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: harisankarg909/multi_server:v2
+          image: harisankarg909/multi_server
           ports:
             - containerPort: 5000
           resources:
@@ -38,4 +38,8 @@ spec:
               value: '5432'
             - name: PGDATABASE
               value: postgres
-            
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD

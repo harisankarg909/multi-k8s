@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: harisankarg909/multi_client:v3
+          image: harisankarg909/multi_client
           ports:
             - containerPort: 3000
           resources:
